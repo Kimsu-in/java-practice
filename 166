@@ -1,0 +1,66 @@
+package helloword;
+
+public abstract class Book{
+	private int code;
+	private String title;
+	Book(){}
+	Book(int code, String title){
+		this.code = code;
+		this.title = title;
+	}
+	int getCode() {
+		return code;
+	}
+	String getTitle() {
+		return title;
+	}
+	abstract void printInfo();
+}
+------------------------
+
+public class ComputerBook extends Book{
+	private int stock;
+	ComputerBook(){}
+	ComputerBook(int code, int stock){
+		super(code, title);
+		this.stock = stock;
+	}
+	void printInfo() {
+		System.out.println("ComputerBook Info");
+		System.out.println("----------");
+		System.out.println("code:"+getCode());
+		System.out.println("title:"+getTitle());
+		System.out.println("stock:"+this.stock);
+	}
+}
+--------------------------------
+
+public class EngilshBook extends Book{
+	private int publishedYear;
+	EnglishBook(){}
+	EnglishBook(int code, String title, int publishedYear){
+		super(code, title);
+		this.publishedYear - publishedYear;
+	}
+	void printInfo() {
+		System.out.println("EnglishBook Info");
+		System.out.println("-------------");
+		System.out.println("code:"+getCode());
+		System.out.println("title:"+getTitle());
+		System.out.println("publishedYear:"+this.publishedYear);
+	}
+}
+------------------------------------
+public class Hellow{
+	public static void main(String[] args) {
+		Book book[]= {new ComputerBook(1123, "Java", 15),
+				new EnglishBook(2000, "Toefl", 2019),
+				new EnglishBook(2001, "Toeic", 2018),
+				new ComputerBook(1150, "Python", 17),
+				new EnglishBook(2010, "Gre", 2018)};
+		for(Book bk:book) {
+			bk.printInfo();
+			System.out.println();
+		}
+	}
+}
