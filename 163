@@ -1,0 +1,36 @@
+package helloword;
+
+public abstract class Parent{
+	private int dataA;
+	
+	Parent(){}
+	Parent(int dataA){
+		this.dataA = dataA;
+	}
+	void show() {
+		System.out.println("parent show:"+dataA);
+	}
+}
+--------------------------------------------
+
+public class Child extends Parent{
+	private int dataB;
+	
+	Child(){}
+	Child(int dataA, int dataB){
+		super(dataA);
+		this.dataB;
+	}
+	void show() {
+		super.show();
+		System.out.println("child show:"+dataB);
+	}
+}
+----------------------------------------------
+
+public class Hellow{
+	public static void main(String[] args) {
+		Child x = new Child(10,20);
+		x.show();
+	}
+}
