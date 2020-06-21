@@ -1,0 +1,42 @@
+package helloword;
+
+public class Parent{
+	public void show() {
+		System.out.println("parent show()");
+	}
+	public void print() {
+		System.out.println("parent print()");
+	}
+}
+-----------------------------------------
+
+package helloword;
+
+public class Main{
+	public static void main(String[] args) {
+		Parent x = new Child1();
+		Parent y = new Child2();
+		x.show();
+		y.show();
+		x.print();
+		y.print();
+	}
+}
+-----------------------------------------
+
+package helloword;
+
+public class Child1 extends Parent{
+	public void print() {
+		System.out.println("child1 print()");
+		}
+}
+----------------------------------------
+
+package helloword;
+
+public class Child2 extends Parent{
+	public void print() {
+		System.out.println("child2 print()");
+		}
+}
