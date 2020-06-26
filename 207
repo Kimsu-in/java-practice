@@ -1,0 +1,25 @@
+package helloword;
+
+class MyException extends Exception{
+	int x;
+	MyException(int x){
+		this.x = x;
+	}
+	public String toSting() {
+		return "I am" + x + "in MyException class";
+	}
+}
+
+public class Hellow{
+	public static void main(String[] args) {
+		MyException me = new MyException(10);
+		try {
+			System.out.println("before throw MyExceprion");
+			throw me;
+		}
+		catch(MyException e) {
+			System.out.println(e);
+		}
+		System.out.println("main ends");
+	}
+}
