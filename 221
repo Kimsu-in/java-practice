@@ -1,3 +1,11 @@
+test.txt
+
+hellow 10 true 5.3
+10000000000
+7  5  123.1234
+
+
+----------------------------------------------
 package helloword;
 
 import java.io.File;
