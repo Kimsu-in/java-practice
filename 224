@@ -12,7 +12,7 @@ public class Hellow {
 		try {
 			fos = new FileWriter("data5.txt");
 			fos.write(cbuf);
-			fos.write(lng);
+			fos.write(lang);
 		}
 		catch(IOException e) {
 			e.printStackTrace();
