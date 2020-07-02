@@ -1,0 +1,19 @@
+package helloword;
+
+import java.util.Iterator;
+import java.util.TreeSet;
+
+
+public class Hellow {
+ 	public static void main(String[] args) {
+ 		int A[]= {5,6,7,2,3,4,8,9,10,1};
+ 		TreeSet<Integer>ts = new TreeSet<>();
+ 		for(int i=0;i<A.length;i++)
+ 			ts.add(A[i]);
+ 		System.out.println(ts);
+ 		Iterator<Integer>itr = ts.iterator();
+ 		while(itr.hasNext()) {
+ 			System.out.print(itr.next()+" ");
+ 		}
+	}
+}
