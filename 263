@@ -1,0 +1,12 @@
+package helloword;
+
+interface MyValue2{
+	double getValue();
+}
+public class Hellow {
+ 	public static void main(String[] args) {
+ 		MyValue2 mv2;
+ 		mv2 = ()->100.5;
+ 		System.out.println(mv2.getValue());
+	}
+}
