@@ -1,0 +1,13 @@
+package helloword;
+
+interface MyValue4{
+	double getValue(int n);
+}
+public class Hellow {
+ 	public static void main(String[] args) {
+ 		MyValue4 mv4;
+ 		mv4 = (n)->(n % 2)==0;
+ 		System.out.println(mv4.getValue(50));
+ 		System.out.println(mv4.getValue(25));
+	}
+}
