@@ -5,6 +5,7 @@ class Test{
 	Test(String m){
 		msg = m;
 	}
+	@Deprecated
 	String getMsg() {
 		return msg;
 	}
