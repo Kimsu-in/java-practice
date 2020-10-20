@@ -1,0 +1,60 @@
+package helloword;
+
+class Score{
+	private int math;
+	private int english;
+	Score(){}
+	Score(int math, int english){
+		this.math = math;
+		this.english = english;
+	}
+	int getMath() {return math;}
+	int getEnglish() {return english;}
+	void setMath() {this.math = math;}
+	void setEnglish () {this.english = english;}
+	void incMath(int n) {this.math += n;}
+	void insEnglish(int n) {this.english += n;}
+}
+class Student{
+	private String name;
+	private Score score;
+	Student(){}
+	Student(String name, Score score){
+		this.name = name;
+		this.score = score;
+	}
+	String getName() {return name;}
+	Score getScore() {return score;}
+	void setName(String name) {this.name = name;}
+	void setScore(Score score) {this.score = score;}
+	void incScore(int m, int e) {
+		score.incMath(m);
+		score.insEnglish(e);
+	}
+	void printStudent() {
+		System.out.println(name+":math("+score.getMath()+"),english("+score.getEnglish()+")");
+	}
+}
+public class Hellow{
+	public static void main(String[] args) {
+		Student s1=new Student("Alice", new Score(90,80));
+		Score a = new Score(88, 93);
+		Student s2 = new Student("Bob", a);
+		Student s3 = new Student();
+		Score b = new Score(78,70);
+		s3.setName("Paul");
+		s3.setScore(b);
+		s1.incScore(3, 5);
+		s1.printStudent();
+		s2.printStudent();
+		s3.printStudent();
+	}
+}
+
+
+
+
+Alice:math(93),english(85)
+Bob:math(88),english(93)
+Paul:math(78),english(70)
+
