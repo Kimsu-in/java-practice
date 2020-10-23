@@ -1,0 +1,28 @@
+package helloword;
+
+class Parent{
+	void printParent() {
+		System.out.println("I am parent");
+	}
+}
+class Child extends Parent{
+	Child(){
+		System.out.println("child constructor is called");
+	}
+	void printChild() {
+		System.out.println("I am child");
+	}
+}
+public class Hellow{
+	public static void main(String[] args) {
+		Child c = new Child();
+		c.printParent();
+		c.printChild();
+	}
+}
+
+
+
+child constructor is called
+I am parent
+I am child
